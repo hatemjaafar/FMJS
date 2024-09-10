@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="\css\style.css" >
+    <link rel="stylesheet" href="\css\meme-editor.css" >
 </head>
 <body>
-    <h1>Hello world</h1>
+
+    <div id="header" class="header">
+        Mon entete
+    </div>
+    <div id="navbar">
+        navbar
+    </div>
+    <div id="main">        
+        <div id="meme-viewer">
+            viewer
+        </div>
+        <div id="meme-editor">
+            <form id="meme-editor-form">  
+                <div><h2>Edition</h2></div>      
+                <div>
+                    <label for="titre">titre</label>
+                    <input type="text" name="titre" id="meme-titre">
+                </div>
+                <br>
+                <div>
+                    <label for="imageId">image</label>
+                    <select id="meme-imageId" name="meme-imageId">
+                        <option value="-1"> Pas d'image</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="meme-text"></textarea>
+                </div>
+                <div><h2>Décoration</h2></div>
+                <div>
+                    <label for="fontSize">font-size</label>
+                    <input type="number" name="fontsize" id="font_size">
+                </div>
+                <div>
+                    <label for="fontWeight">font-weight</label>
+                    <input type="number" name="fontWeight" id="font_weight">
+                </div>
+                <div>
+                    <label for="checkbox">Mycheck</label>
+                    <input type="checkbox" name="memeCheckbox" id="meme-checkbox">
+                </div>
+                <div>
+                    <div>
+                        <label for="radio">My radio</label>
+                        <input type="radio" id="meme-off" name="memeOff" value="1" checked />    
+                        <input type="radio" id="meme-on" name="memeOff" value="2"  />                          
+                      </div>
+                </div>
+                <div>
+                    <label for="color">My color</label>
+                    <input type="color" name="memeColor" id="meme-color">
+                </div>
+
+
+                <div class="col_2">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Valider</button>
+                </div>                
+            </form> 
+        </div>     
+    </div>   
 </body>
+    </div>
+    <div id="footer">Copy Right &copy; 2024 
+
+    </div>
+    
 </html>

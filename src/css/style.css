@@ -1,0 +1,17 @@
+body{
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    font-size: x-large;
+    color: green;
+}
+#main{
+    flex-grow: 1;
+    display: flex;
+}
+#footer{
+    text-align: center;
+}
