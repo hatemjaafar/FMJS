@@ -1,0 +1,27 @@
+import ADR_REST,{ RESSOURCES_NAMES } from "../config/constante";
+class Image {
+  id;
+  name;
+  url;
+  w;
+  h;
+  constructor() {}
+
+  save() {
+    const promise = etch(
+      `${REST_ADR}${RESSOURCES_NAMES.images}${
+        undefined !== this.id ? `/${this.id}` : ""
+      }`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: undefined !== this.id ? "PUT" : "POST",
+        body: JSON.stringify(this),
+      }
+    ).then((r) => r.json());
+    promise.then((r) => Object.assign(this, r));
+    return promise;
+  }
+}

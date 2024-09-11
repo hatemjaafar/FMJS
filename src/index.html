@@ -1,123 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="\css\style.css">
-    <link rel="stylesheet" href="\css\meme-editor.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/meme-editor.css" />
+    
+    
+    <script src="/js/Modal/Modal.js"></script>
     <script src="/js/index.js"></script>
-</head>
+  </head>
 
-<body>
-
-    <div id="header" class="header">
-        Mon entete
+  <body>
+    <div id="header">
+      Meme<span class="dot">.</span><span class="js">js</span>
     </div>
     <div id="navbar">
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-                    aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </div>
     <div id="main">
-        <div id="meme-viewer">
-            <svg viewBox="0 0 932 582" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <image
-                    xlink:href="https://www.leparisien.fr/resizer/BhKb0Kpeb0-iXUNeyXyk5ofyUGU=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/MLMMENZVLBCTHH6WWE6TITWXEA.jpg" />
-                <text x="0" y="0" alignment-baseline="hanging" font-size="50" text-decoration="underline"
-                    font-style="italic" font-weight="900" fill="white">la star</text>
-            </svg>
-        </div>
-        <div id="meme-editor">
-            <form id="meme-editor-form">
-                <div>
-                    <h2>Edition</h2>
-                </div>
-                <div>
-                    <label for="meme-titre">titre</label>
-                    <input type="text" name="titre" id="meme-titre">
-                </div>
-                <br>
-                <div>
-                    <label for="meme-imageId">image</label>
-                    <select id="meme-imageId" name="meme-imageId">
-                        <option value="-1"> Pas d'image</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="meme-text">Commentaire</label>
-                    <textarea id="meme-text" name="commentaire"></textarea>
-                </div>
-                <div>
-                    <h2>Décoration</h2>
-                </div>
-                <div>
-                    <label for="fontsize">font-size</label>
-                    <input type="number" name="fontsize" id="font_size">
-                </div>
-                <div>
-                    <label for="fontWeight">font-weight</label>
-                    <input type="number" name="fontWeight" id="font_weight">
-                </div>
-                <div>
-                    <label for="memeCheckbox">Mycheck</label>
-                    <input type="checkbox" name="memeCheckbox" id="meme-checkbox">
-                </div>
-                <div>
-                    <div>
-                        <label for="memeOff">My radio</label>
-                        <input type="radio" id="meme-off" name="memeOff" value="1" checked />
-                        <input type="radio" id="meme-on" name="memeOff" value="2" />
-                    </div>
-                </div>
-                <div>
-                    <label for="memeColor">My color</label>
-                    <input type="color" name="memeColor" id="meme-color">
-                </div>
-
-                <div class="col_2">
-                    <button type="button" class="btn btn-warning">Reset</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-            </form>
-        </div>
+      
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-</div>
-<div id="footer">Copy Right &copy; 2024
-</div>
+    <div id="footer">copyright &copy; 2024</div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
