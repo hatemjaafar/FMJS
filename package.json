@@ -4,7 +4,8 @@
   "description": "Formation javascript",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server --baseDir=\"src\" "
+    "dev": "lite-server --baseDir=\"src\" ",
+     "json": "json-server -p 5629 db/db.json"
   },
   "keywords": [],
   "author": "",

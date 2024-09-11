@@ -3,10 +3,19 @@ body{
     display: flex;
     flex-direction: column;
 }
-
-.header{
+#main{height: calc(97vh - 70px);}
+#header{
     font-size: x-large;
-    color: green;
+    font-weight: 900;
+    color: tomato;
+}
+#header .dot
+{
+    color:black;
+}
+#header .js{
+    font-style: italic;
+    color: skyblue;
 }
 #main{
     flex-grow: 1;
